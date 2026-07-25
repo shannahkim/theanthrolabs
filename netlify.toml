@@ -1,0 +1,3 @@
+# Netlify config — static site served from repo root, no build step.
+[build]
+  publish = "."

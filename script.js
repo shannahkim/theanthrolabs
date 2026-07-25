@@ -3,7 +3,7 @@
 // Footer year
 document.getElementById("year").textContent = new Date().getFullYear();
 
-// Waitlist form -> Formspree (AJAX so the user stays on the page)
+// Waitlist form -> Netlify Forms (submits to the site root, no third party)
 const form = document.getElementById("waitlist-form");
 const msg = document.getElementById("waitlist-msg");
 
@@ -12,28 +12,19 @@ form.addEventListener("submit", async (e) => {
   msg.className = "waitlist__msg";
   msg.textContent = "";
 
-  const action = form.getAttribute("action");
-  const notConfigured = action.includes("YOUR_FORM_ID");
-
-  if (notConfigured) {
-    // Formspree endpoint not set yet — fail gracefully with a clear hint.
-    msg.classList.add("error");
-    msg.textContent =
-      "Waitlist isn't connected yet. Add your Formspree form ID in index.html.";
-    return;
-  }
-
-  const data = new FormData(form);
   const btn = form.querySelector("button");
   const original = btn.textContent;
   btn.disabled = true;
   btn.textContent = "Adding you…";
 
+  // Netlify collects form posts sent to any path on the site as urlencoded data.
+  const body = new URLSearchParams(new FormData(form)).toString();
+
   try {
-    const res = await fetch(action, {
+    const res = await fetch("/", {
       method: "POST",
-      body: data,
-      headers: { Accept: "application/json" },
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body,
     });
     if (res.ok) {
       form.reset();

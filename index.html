@@ -191,14 +191,18 @@
         </p>
 
         <!--
-          WAITLIST FORM
-          This posts to Formspree (free tier). To activate:
-          1. Sign up at https://formspree.io with your brand email
-          2. Create a form, copy its endpoint (looks like https://formspree.io/f/abcd1234)
-          3. Replace YOUR_FORM_ID below with that ID.
+          WAITLIST FORM — Netlify Forms (built-in, free, no third party).
+          Netlify auto-detects this form on deploy (data-netlify="true").
+          Submissions show up in: Netlify dashboard -> Forms -> "waitlist".
+          Turn on email notifications there to get alerted on each signup.
         -->
         <form class="waitlist__form" id="waitlist-form"
-              action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+              name="waitlist" method="POST"
+              data-netlify="true" netlify-honeypot="bot-field">
+          <input type="hidden" name="form-name" value="waitlist" />
+          <p hidden aria-hidden="true">
+            <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+          </p>
           <label class="sr-only" for="email">Email address</label>
           <input
             type="email" id="email" name="email" required
