@@ -1,458 +1,245 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Anthrolabs — You know gimbap. Now meet gim.</title>
-  <meta name="description" content="Seapals: real Korean roasted gim, three ingredients, landing in the US November 2026. Join the waitlist for 10% off and first access to the drop." />
+  <title>바른명란김 — 국내산 저칼로리 명란김</title>
+  <meta name="description" content="국내산 신안·목포 김에 명란 2.8%, 고급 현미유. HACCP 인증시설에서 만든 저칼로리 명란김. 웨이트리스트 등록하고 출시 소식을 가장 먼저 받아보세요." />
 
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Anthrolabs — You know gimbap. Now meet gim." />
-  <meta property="og:description" content="Real Korean roasted gim. Three ingredients. Landing November 2026 — join the waitlist for 10% off." />
+  <meta property="og:title" content="바른명란김 — 국내산 저칼로리 명란김" />
+  <meta property="og:description" content="국내산 신안·목포 김 + 명란 2.8% + 고급 현미유. HACCP 인증시설 생산. 웨이트리스트 등록하고 출시 소식을 가장 먼저 받아보세요." />
   <meta property="og:url" content="https://theanthrolabs.com/t1" />
-  <meta property="og:image" content="https://theanthrolabs.com/assets/seapals-ingredients.jpg" />
+  <meta property="og:image" content="https://theanthrolabs.com/t1/assets/studio-front.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
 
   <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
   <link rel="canonical" href="https://theanthrolabs.com/t1" />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Open+Sans:wght@400;600;700;800&family=Caveat:wght@500;700&family=DM+Sans:wght@400;500;700;900&family=Poppins:wght@400;600;700;800;900&family=Nunito+Sans:ital,opsz,wght@0,6..12,400;0,6..12,600;0,6..12,700;0,6..12,900;1,6..12,700&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
 
-  <link rel="stylesheet" href="/styles.css" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
-<!-- ══════════════ ANNOUNCEMENT ══════════════ -->
-<div class="announce">
-  <span class="announce__main">Gim drops in <span id="days-left">—</span> days</span>
-  <span class="announce__dot" aria-hidden="true"></span>
-  <span class="announce__sub">November 2026</span>
-</div>
-
-<!-- ══════════════ TOP NAV ══════════════ -->
 <header class="topbar">
-  <a href="#top" class="topbar__logo" data-page-link="home" aria-label="Anthrolabs home">
-    <img src="/assets/anthrolabs-logo.svg" alt="Anthrolabs" width="5001" height="513" />
-  </a>
-  <nav class="topbar__nav" aria-label="Primary">
-    <button type="button" class="navlink" data-page-link="home">HOME</button>
-    <button type="button" class="navlink" data-page-link="gim">GIM</button>
-    <button type="button" class="navlink" data-page-link="story">STORY</button>
-    <a href="#waitlist" class="navcta">GET ON THE LIST</a>
-  </nav>
+  <a href="#top" class="topbar__logo">바른명란김</a>
+  <a href="#waitlist" class="topbar__cta">웨이트리스트 등록</a>
 </header>
 
-<!-- ══════════════ STICKY BAR ══════════════ -->
-<div class="stickybar" id="stickybar" hidden>
-  <div class="stickybar__left">
-    <img src="/assets/anthrolabs-logo.svg" alt="Anthrolabs" class="stickybar__logo" width="5001" height="513" />
-    <span class="stickybar__copy"><em>10% off</em> + first to shop the November drop</span>
-  </div>
-  <form class="pill-form" data-waitlist-inline>
-    <label class="sr-only" for="sticky-email">Email address</label>
-    <input type="email" id="sticky-email" name="email" required placeholder="drop your email" autocomplete="email" data-email-sync />
-    <button type="submit">I'M IN →</button>
-  </form>
-</div>
+<section class="hero" id="top">
+  <div class="hero__copy">
+    <span class="eyebrow">국내산 저칼로리 명란김</span>
+    <h1 class="display display--hero">
+      건강에 미쳐있는 서울대생들이<br />
+      국내 1타 김 장인을 찾아 만든 김
+    </h1>
+    <p class="lead">
+      쉿, 몰래몰래 여자아이돌이 먹는 김. 화가 나서 본인들이 직접 먹으려고 만들었기에,
+      타협하기 싫어 원재료율이 매우 높습니다.
+    </p>
 
-<main id="top">
-
-<!-- ══════════════════════════════════════════ HOME ══════════════════════════════════════════ -->
-<div class="page" data-page="home">
-
-  <section class="hero">
-    <div class="hero__media">
-      <img src="/assets/seapals-ingredients.jpg" alt="Roasted gim sheets, sea salt and sunflower oil beside two Seapals packs" class="hero__img" width="1344" height="796" fetchpriority="high" />
-      <span class="floatchip floatchip--sky hero__chip">MADE IN KOREA</span>
+    <div data-when="idle">
+      <form class="pill-form" data-waitlist-inline>
+        <input type="hidden" name="form-name" value="myeongran-waitlist" />
+        <input type="email" name="email" required placeholder="이메일 주소" autocomplete="email" data-email-sync />
+        <button type="submit">등록하기</button>
+      </form>
+      <p class="formerror" data-form-error role="status" aria-live="polite"></p>
     </div>
+    <span class="donetag" data-when="done" hidden>등록 완료! 출시 소식을 가장 먼저 보내드릴게요.</span>
 
-    <div class="hero__body">
-      <div class="hero__headline">
-        <h1>
-          <span class="hero__script">YOU KNOW GIMBAP!</span>
-          <span class="hero__punch">NOW MEET GIM.</span>
-        </h1>
-        <p class="hero__sub">The crispy Korean seaweed<br />behind your favorite rolls — now a snack!</p>
-      </div>
-
-      <!-- form state -->
-      <div class="card signup" data-when="idle">
-        <div class="signup__badges">
-          <span class="tag tag--pink">10% OFF</span>
-          <span class="signup__badgetext">+ first to shop the November drop</span>
-        </div>
-        <form class="pill-form pill-form--lg" data-waitlist-inline>
-          <label class="sr-only" for="hero-email">Email address</label>
-          <input type="email" id="hero-email" name="email" required placeholder="drop your email" autocomplete="email" data-email-sync />
-          <button type="submit" class="btn-sheen"><span class="sheen" aria-hidden="true"></span><span>I'M IN →</span></button>
-        </form>
-        <p class="signup__note">
-          <span class="dot dot--mint" aria-hidden="true"></span>
-          <strong id="list-count">1,240</strong> already on the list · one email at launch, no spam
-        </p>
-      </div>
-
-      <!-- success state -->
-      <div class="card success" data-when="done" hidden>
-        <div class="success__head">
-          <div class="flakes" aria-hidden="true">
-            <span style="--fx:-86px; --fy:-62px; --fr:220deg;  background:#16324A; width:9px;  height:5px; animation-delay:40ms;  animation-duration:900ms;"></span>
-            <span style="--fx:-38px; --fy:-84px; --fr:-160deg; background:#2B7BB5; width:8px;  height:5px; animation-delay:10ms;  animation-duration:980ms;"></span>
-            <span style="--fx:24px;  --fy:-92px; --fr:180deg;  background:#16324A; width:10px; height:6px; animation-delay:70ms;  animation-duration:940ms;"></span>
-            <span style="--fx:74px;  --fy:-70px; --fr:-200deg; background:#5AC2AD; width:8px;  height:4px; animation-delay:30ms;  animation-duration:1020ms;"></span>
-            <span style="--fx:112px; --fy:-30px; --fr:150deg;  background:#F58BB0; width:9px;  height:5px; animation-delay:90ms;  animation-duration:900ms;"></span>
-            <span style="--fx:-108px;--fy:-18px; --fr:-130deg; background:#2B7BB5; width:7px;  height:4px; animation-delay:60ms;  animation-duration:1060ms;"></span>
-            <span style="--fx:-62px; --fy:26px;  --fr:240deg;  background:#16324A; width:10px; height:5px; animation-delay:110ms; animation-duration:1000ms;"></span>
-            <span style="--fx:56px;  --fy:34px;  --fr:-190deg; background:#5AC2AD; width:8px;  height:5px; animation-delay:130ms; animation-duration:960ms;"></span>
-            <span style="--fx:0px;   --fy:44px;  --fr:170deg;  background:#F58BB0; width:9px;  height:4px; animation-delay:100ms; animation-duration:1040ms;"></span>
-          </div>
-          <div class="success__title">
-            <span class="check">✓</span>
-            <span class="display display--28">You're in<span data-greet></span>!</span>
-          </div>
-          <p class="success__pos">You're <strong>#<span id="queue-pos">1,241</span></strong> in line. 10% off is locked in.</p>
-        </div>
-
-        <div class="rule"></div>
-
-        <div class="success__referral">
-          <p class="referral__hook">I float, I snack,<em> I share…</em></p>
-          <p class="referral__body">Every friend who joins moves you up 10 spots. Three friends and your first pack is on us.</p>
-          <div class="pill-form pill-form--static">
-            <span class="referral__link" data-referral-text>theanthrolabs.com/gim?ref=you</span>
-            <button type="button" data-copy-link>Copy</button>
-          </div>
-          <div class="referral__share">
-            <a href="#" target="_blank" rel="noopener" data-share="x">Share on X</a>
-            <a href="#" target="_blank" rel="noopener" data-share="whatsapp">WhatsApp</a>
-            <a href="#" data-share="sms">Text a friend</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <div class="marquee marquee--sky">
-    <div class="marquee__track">
-      <span>JOIN THE WAITLIST ✦ 10% OFF AT LAUNCH ✦ FIRST TO SHOP THE NOVEMBER DROP ✦</span>
-      <span>JOIN THE WAITLIST ✦ 10% OFF AT LAUNCH ✦ FIRST TO SHOP THE NOVEMBER DROP ✦</span>
+    <div class="hero__specs">
+      <div class="hero__spec"><b>37.7kcal</b><span>1봉(6g) 기준</span></div>
+      <div class="hero__spec"><b>HACCP</b><span>인증시설 생산</span></div>
+      <div class="hero__spec"><b>국내산</b><span>신안·목포 원초</span></div>
     </div>
   </div>
 
-  <section class="meet">
-    <h2 class="meet__title">MEET SEAPALS</h2>
-    <div class="meet__grid">
-      <figure class="meetcard">
-        <div class="meetcard__frame meetcard__frame--pack">
-          <img src="/assets/seapals-pack.jpg" alt="Seapals pack front" width="1000" height="1000" loading="lazy" />
-          <span class="floatchip floatchip--pink meetcard__chip">START HERE</span>
-        </div>
-        <figcaption>
-          <span class="meetcard__name">SEAPALS PACK</span>
-          <span class="meetcard__desc">Sea salt, roasted crisp</span>
-        </figcaption>
-      </figure>
-      <figure class="meetcard">
-        <img src="/assets/gim-stack.jpg" alt="A tied stack of paper-thin roasted gim sheets" class="meetcard__img" width="1100" height="665" loading="lazy" />
-        <figcaption>
-          <span class="meetcard__name">INSIDE</span>
-          <span class="meetcard__desc">Paper-thin, shatter-crisp</span>
-        </figcaption>
-      </figure>
-      <figure class="meetcard">
-        <img src="/assets/sea-salt.jpg" alt="Coarse sea salt in a wooden bowl" class="meetcard__img" width="900" height="900" loading="lazy" />
-        <figcaption>
-          <span class="meetcard__name">THE SALT</span>
-          <span class="meetcard__desc">The only seasoning</span>
-        </figcaption>
-      </figure>
-    </div>
-  </section>
-
-  <section class="clean">
-    <header class="clean__head">
-      <h2>CLEAN, THE BORING WAY</h2>
-      <p>Nothing added to make it taste like something else.</p>
-    </header>
-    <div class="clean__grid">
-      <div class="statcard">
-        <span class="statcard__num">3</span>
-        <span class="statcard__label">ingredients</span>
-        <span class="statcard__desc">Seaweed, sunflower oil, sea salt. Nothing to look up.</span>
-      </div>
-      <div class="statcard">
-        <span class="statcard__num">25</span>
-        <span class="statcard__label">calories per pack</span>
-        <span class="statcard__desc">The entire pack. Yes, all of it.</span>
-      </div>
-      <div class="statcard">
-        <span class="statcard__num">0</span>
-        <span class="statcard__label">sugar</span>
-        <span class="statcard__desc">No sweeteners, no flavor powders, no coating.</span>
-      </div>
-      <div class="statcard">
-        <span class="statcard__num">0</span>
-        <span class="statcard__label">gluten, dairy, animal</span>
-        <span class="statcard__desc">Gluten free and vegan, by recipe not by swap.</span>
-      </div>
-    </div>
-    <p class="clean__fine">Exact nutrition figures publish with the final panel — we would rather post real numbers than round ones.</p>
-  </section>
-
-  <section class="ways">
-    <header class="ways__head">
-      <h2>THREE WAYS TO EAT IT</h2>
-      <span>Easiest first. Work your way down.</span>
-    </header>
-    <div class="ways__grid">
-      <article class="way">
-        <img src="/assets/gim-eating.jpg" alt="Eating a sheet of roasted gim by hand" style="object-position:50% 28%;" width="1000" height="1502" loading="lazy" />
-        <h3>STRAIGHT UP</h3>
-        <p>Tear, eat, done. No plate involved.</p>
-      </article>
-      <article class="way">
-        <img src="/assets/gim-crumbled.jpg" alt="Crumbling roasted gim over a bowl of rice" style="object-position:60% 62%;" width="1300" height="837" loading="lazy" />
-        <h3>CRUMBLED</h3>
-        <p>Over noodles, eggs, anything savory.</p>
-      </article>
-      <article class="way">
-        <img src="/assets/gim-with-rice.jpg" alt="Eating rice wrapped in a sheet of gim" style="object-position:50% 34%;" width="1300" height="865" loading="lazy" />
-        <h3>WITH RICE</h3>
-        <p>Korea's original way. Fold, pinch, eat.</p>
-      </article>
-    </div>
-  </section>
-</div>
-
-<!-- ══════════════════════════════════════════ GIM ══════════════════════════════════════════ -->
-<div class="page" data-page="gim" hidden>
-
-  <section class="hero hero--gim">
-    <div class="gimframe">
-      <img src="/assets/gim-dish.jpg" alt="Roasted gim sheets on a white dish" width="740" height="493" loading="lazy" />
-      <span class="floatchip floatchip--pink gimframe__chip">SEA SALT</span>
-    </div>
-    <div class="hero__body">
-      <span class="eyebrow eyebrow--pale">SEAPALS · SEAWEED SNACKS</span>
-      <h1 class="display display--52">SEA SALT<br /><span class="blue">ROASTED GIM</span></h1>
-      <p class="lead">Roasted twice. Salted once. Nothing else.</p>
-      <p class="prose">Thin enough to fold over rice, crisp enough to eat on its own. This is the same gim sold in Korean grocery aisles — we did not reformulate it for the American palate.</p>
-      <div class="checkrow">
-        <span>✓ Real Korean gim</span>
-        <span>✓ Nutrient dense</span>
-        <span>✓ No sugar</span>
-        <span>✓ Gluten free</span>
-      </div>
-
-      <div data-when="idle">
-        <form class="notify" data-waitlist-inline>
-          <label class="sr-only" for="gim-email">Email address</label>
-          <input type="email" id="gim-email" name="email" required placeholder="drop your email" autocomplete="email" data-email-sync />
-          <button type="submit">NOTIFY ME</button>
-        </form>
-        <p class="notify__fine">Estimated $9–36 depending on size. Final pricing at launch.</p>
-      </div>
-      <div class="gimdone" data-when="done" hidden>
-        <span class="display display--30">You're in<span data-greet></span>!</span>
-        <span class="gimdone__sub">The November email is on its way.</span>
-      </div>
-    </div>
-  </section>
-
-  <div class="marquee marquee--sky">
-    <div class="marquee__track marquee__track--26">
-      <span>FARMED IN KOREA ✦ ROASTED IN KOREA ✦ PACKED IN KOREA ✦</span>
-      <span>FARMED IN KOREA ✦ ROASTED IN KOREA ✦ PACKED IN KOREA ✦</span>
-    </div>
+  <div class="hero__art">
+    <img src="assets/hero-front.png" alt="바른명란김 패키지" width="1400" height="1400" />
   </div>
+</section>
 
-  <section class="inside">
-    <div class="inside__panel">
-      <span class="eyebrow eyebrow--onink">WHAT'S INSIDE</span>
-      <dl class="inside__list">
-        <div><dt>ROASTED GIM</dt><dd>Korean coast</dd></div>
-        <div><dt>SUNFLOWER OIL</dt><dd>for the roast</dd></div>
-        <div><dt>SEA SALT</dt><dd>the flavor</dd></div>
-      </dl>
-      <p class="inside__fine">Nutrition and allergen panel goes live with the final spec.</p>
-    </div>
-    <div class="inside__grid">
-      <div class="tile tile--pale"><span>sheets fanned out</span></div>
-      <div class="tile tile--pinkpale"><span>folded over rice</span></div>
-      <div class="tile tile--grey"><span>pack in a tote bag</span></div>
-      <div class="tile tile--sky">
-        <span class="display display--28">SHIPS IN NOVEMBER</span>
-        <span class="tile__body">One click, two days, done. Link goes live in November.</span>
-      </div>
-    </div>
-  </section>
-</div>
+<hr class="hairline" />
 
-<!-- ══════════════════════════════════════════ STORY ══════════════════════════════════════════ -->
-<div class="page" data-page="story" hidden>
-  <section class="storyhead">
-    <span class="eyebrow eyebrow--pale">OUR STORY</span>
-    <h1 class="display display--56">WE READ THE LABEL <span class="blue">SO YOU DON'T HAVE TO.</span></h1>
-    <p class="prose prose--wide">Anthrolabs is a small house brand. We keep finding Korean everyday things that are quietly better than what's on the shelf here, and we bring them over one at a time. First up: gim.</p>
-  </section>
-  <div class="storyhero">
-    <div class="tile tile--pale tile--tall"><span>founders / sourcing trip photo, full width</span></div>
-  </div>
-  <section class="storygrid">
-    <article class="storycard storycard--white">
-      <span class="eyebrow eyebrow--muted">01 / THE RULE</span>
-      <span class="display display--28">If we can't explain a line on the label, we don't carry it.</span>
-    </article>
-    <article class="storycard storycard--pale">
-      <span class="eyebrow">02 / SOURCING</span>
-      <span class="display display--28">Producers and regions listed here once partners are confirmed.</span>
-    </article>
-    <article class="storycard storycard--pinkpale">
-      <span class="eyebrow eyebrow--rose">03 / WHO WE ARE</span>
-      <span class="display display--28">Founder note and photo drop in right here.</span>
-    </article>
-  </section>
-</div>
-
-<!-- ══════════════ WAITLIST (shared) ══════════════ -->
-<section class="waitlist" id="waitlist">
-  <div class="waitlist__pitch">
-    <span class="eyebrow eyebrow--onsky">THE WAITLIST</span>
-    <h2 class="waitlist__title">BE FIRST IN LINE.<br /><span>GET 10% OFF.</span></h2>
-    <p>Join the list → 10% off + first to shop the November drop. One email, nothing in between.</p>
-    <img src="/assets/seapals-pack.jpg" alt="Seapals three-pack" class="waitlist__img" width="1000" height="1000" loading="lazy" />
-  </div>
-
-  <div class="waitlist__card">
-    <!--
-      Netlify Forms — auto-detected at deploy from this static markup.
-      Submissions land in: Netlify dashboard → Forms → "waitlist".
-    -->
-    <form class="fullform" data-when="idle"
-          name="waitlist" method="POST"
-          data-netlify="true" netlify-honeypot="bot-field">
-      <input type="hidden" name="form-name" value="waitlist" />
-      <p hidden aria-hidden="true">
-        <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+<section id="origin">
+  <div class="section-inner">
+    <div class="section-head">
+      <span class="eyebrow eyebrow--ghost">싸구려는 <span class="no">NO</span></span>
+      <h2 class="display display--section">오직 국내산 전라남도<br />신안 &amp; 목포 김으로</h2>
+      <p class="prose">
+        화가 나서 본인들이 직접 먹으려고 만들었기에, 타협하기 싫어
+        원재료율이 매우 높은 김입니다.
       </p>
-      <label class="field">
-        <span class="field__label">FIRST NAME</span>
-        <input type="text" name="name" placeholder="Jordan" autocomplete="given-name" data-name-sync />
-      </label>
-      <label class="field">
-        <span class="field__label">EMAIL</span>
-        <input type="email" name="email" required placeholder="you@email.com" autocomplete="email" data-email-sync />
-      </label>
-      <button type="submit" class="fullform__btn">SIGN ME UP</button>
-      <span class="fullform__fine">No spam, no resale, unsubscribe in one click.</span>
-    </form>
-
-    <div class="fulldone" data-when="done" hidden>
-      <span class="tag tag--pale">YOU'RE ON THE LIST</span>
-      <span class="display display--40">Nice one<span data-greet></span>!</span>
-      <p>We'll email you the second the gim goes live — with your 10% off. Check your inbox for a confirmation.</p>
     </div>
 
-    <p class="formerror" data-form-error role="status" aria-live="polite"></p>
-  </div>
-</section>
-
-<!-- ══════════════ ORIGIN ══════════════ -->
-<section class="origin">
-  <div class="origin__text">
-    <span class="eyebrow eyebrow--onink">WHERE IT COMES FROM</span>
-    <h2>GROWN ON KOREA'S COAST. ROASTED THERE TOO.</h2>
-    <p>Gim grows on ropes in cold winter water, gets pressed into paper-thin sheets, and is roasted the way it has been for centuries. Ours is farmed in Korean waters and roasted in Korea — not sourced elsewhere and re-packed.</p>
-    <span class="origin__fine">Producer and region published here once our partner agreement is signed.</span>
-  </div>
-  <div class="origin__media"><span>seaweed farm / drying racks, Korea</span></div>
-</section>
-
-<!-- ══════════════ FAQ + CONTACT ══════════════ -->
-<section class="tail">
-  <div class="tail__faq">
-    <h2>FAQ's</h2>
-    <span class="tail__sub">everything you wanted to ask but didn't</span>
-    <div class="faq">
-      <button type="button" class="faq__item" aria-expanded="false">
-        <span class="faq__row"><span class="faq__q">When does the gim launch?</span><span class="faq__sign" aria-hidden="true">+</span></span>
-        <span class="faq__a">November 2026. The waitlist gets the email the morning it goes live, plus 10% off.</span>
-      </button>
-      <button type="button" class="faq__item" aria-expanded="false">
-        <span class="faq__row"><span class="faq__q">What exactly is gim?</span><span class="faq__sign" aria-hidden="true">+</span></span>
-        <span class="faq__a">Gim is Korean roasted seaweed — thin sheets of laver, brushed with oil, roasted crisp and salted. It is an everyday staple in Korea, eaten with rice or straight from the pack.</span>
-      </button>
-      <button type="button" class="faq__item" aria-expanded="false">
-        <span class="faq__row"><span class="faq__q">Is it really just three ingredients?</span><span class="faq__sign" aria-hidden="true">+</span></span>
-        <span class="faq__a">Seaweed, sunflower oil and sea salt. No sugar, no sweeteners, no flavor powders.</span>
-      </button>
-      <button type="button" class="faq__item" aria-expanded="false">
-        <span class="faq__row"><span class="faq__q">Where is it from?</span><span class="faq__sign" aria-hidden="true">+</span></span>
-        <span class="faq__a">Farmed in Korean coastal waters and roasted in Korea. Producer and region get published once our partner agreement is signed.</span>
-      </button>
-      <button type="button" class="faq__item" aria-expanded="false">
-        <span class="faq__row"><span class="faq__q">Is it gluten free and vegan?</span><span class="faq__sign" aria-hidden="true">+</span></span>
-        <span class="faq__a">Yes to both. Final certifications will be printed on the pack and listed here.</span>
-      </button>
-      <button type="button" class="faq__item" aria-expanded="false">
-        <span class="faq__row"><span class="faq__q">How much will it cost?</span><span class="faq__sign" aria-hidden="true">+</span></span>
-        <span class="faq__a">Final pricing lands at launch. Waitlist members get 10% off whatever it is.</span>
-      </button>
-      <button type="button" class="faq__item" aria-expanded="false">
-        <span class="faq__row"><span class="faq__q">Do you ship outside the US?</span><span class="faq__sign" aria-hidden="true">+</span></span>
-        <span class="faq__a">Not at launch — we are starting in the US. Tell us where you are and we will factor it in.</span>
-      </button>
-      <button type="button" class="faq__item" aria-expanded="false">
-        <span class="faq__row"><span class="faq__q">Can I get a bulk or wholesale order?</span><span class="faq__sign" aria-hidden="true">+</span></span>
-        <span class="faq__a">Yes. Email admin@theanthrolabs.com with your store or volume and we will get back to you.</span>
-      </button>
-    </div>
-  </div>
-
-  <div class="tail__contact">
-    <h2>Contact Us</h2>
-    <span class="tail__sub">we actually read every message</span>
-    <div class="contactcard">
-      <p>Questions, collabs, wholesale inquiries, or just want to talk gim? We're real humans and we'd love to hear from you.</p>
-      <a href="mailto:admin@theanthrolabs.com" class="contactcard__btn">SAY HI TO US</a>
-      <span class="contactcard__mail">admin@theanthrolabs.com</span>
+    <div class="origin__grid">
+      <div class="origin__card">
+        <span class="origin__num">1</span>
+        <h3>청정 전라도 앞바다 양식</h3>
+        <p>오랜 시간 정성껏 양식한 원초만 골라 사용합니다.</p>
+      </div>
+      <div class="origin__card">
+        <span class="origin__num">2</span>
+        <h3>고급 현미유 사용</h3>
+        <p>옥수수유나 식용유 대신, 향이 깨끗한 현미유로 마무리했습니다.</p>
+      </div>
+      <div class="origin__card">
+        <span class="origin__num">3</span>
+        <h3>명란 무려 2.8% 함유</h3>
+        <p>동종 제품 대비 가장 높은 명란 함량을 목표로 배합했습니다.</p>
+      </div>
     </div>
   </div>
 </section>
 
-</main>
+<section id="process" style="background: var(--panel);">
+  <div class="section-inner">
+    <div class="section-head">
+      <span class="eyebrow eyebrow--coral">대충은 <span style="color:#fff">NO</span></span>
+      <h2 class="display display--section">결벽증 수준으로<br />꼼꼼하게 선별합니다</h2>
+    </div>
 
-<!-- ══════════════ FOOTER ══════════════ -->
+    <div class="process">
+      <div class="process__step">
+        <span class="process__badge">1차</span>
+        <div class="process__body">
+          <h3>원물 선별</h3>
+          <p>원초 전문가가 &lsquo;좋은 원물&rsquo;만 직접 선별한 고급 김을 사용합니다.</p>
+        </div>
+      </div>
+      <div class="process__step">
+        <span class="process__badge">2차</span>
+        <div class="process__body">
+          <h3>이물질 · 금속 검출</h3>
+          <p>김 이물질 선별기와 금속 검출기로 전량 금속 검출하고, 미세한 녹가루까지 제거합니다.</p>
+        </div>
+      </div>
+      <div class="process__step">
+        <span class="process__badge">3차</span>
+        <div class="process__body">
+          <h3>HACCP 인증시설 생산</h3>
+          <p>국내 HACCP 인증시설에서 생산해 식품안전관리 인증을 완료했습니다.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="dark-section">
+  <div class="section-inner">
+    <div class="section-head">
+      <span class="eyebrow" style="background:rgba(255,255,255,0.14)">인증 &amp; 기록</span>
+      <h2 class="display display--section">국내 최초 명란김 생산</h2>
+      <p class="prose">명란김 상품 특허와 제조방법 기술 특허를 보유하고 있습니다.</p>
+    </div>
+
+    <div class="certs">
+      <div class="cert">
+        <div class="cert__mark">HACCP</div>
+        <div class="cert__label">식품안전관리인증 완료</div>
+      </div>
+      <div class="cert">
+        <div class="cert__mark">無 3</div>
+        <div class="cert__label">3가지 무첨가</div>
+      </div>
+      <div class="cert">
+        <div class="cert__mark">특허</div>
+        <div class="cert__label">상품 · 제조방법 특허</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="benefits">
+  <div class="section-inner">
+    <div class="section-head">
+      <span class="eyebrow eyebrow--ghost">근데, 왜 유독</span>
+      <h2 class="display display--section">바른명란김을 사랑할까요?</h2>
+    </div>
+
+    <div class="benefits">
+      <div class="benefit">
+        <span class="benefit__tag">장점 1</span>
+        <h3>남다르게 바삭하니까</h3>
+        <p>얇게 펴 바른 명란과 현미유가 눅눅함 없이 끝까지 바삭한 식감을 지켜줍니다.</p>
+      </div>
+      <div class="benefit">
+        <span class="benefit__tag">장점 2</span>
+        <h3>술 안주로 최고니까!</h3>
+        <p>가볍게 곁들이기 좋은 칼로리.</p>
+        <div class="kcal-compare">
+          <div class="kcal-compare__item"><b>300kcal</b><span>일반 과자 한 봉지(50g)</span></div>
+          <span class="kcal-compare__vs">VS</span>
+          <div class="kcal-compare__item"><b style="color:var(--coral-deep)">37.7kcal</b><span>바른명란김 한 봉지(6g)</span></div>
+        </div>
+      </div>
+      <div class="benefit">
+        <span class="benefit__tag">장점 3</span>
+        <h3>밥도둑이니까</h3>
+        <p>따뜻한 밥이나 주먹밥, 계란밥 위에 부숴 올리면 순식간에 한 그릇 뚝딱입니다.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="pack" style="background: var(--panel);">
+  <div class="section-inner pack">
+    <img src="assets/sixpack.jpg" alt="바른명란김 6봉 구성" width="1400" height="1400" loading="lazy" />
+    <div class="pack__copy">
+      <span class="eyebrow eyebrow--ghost">구성</span>
+      <h2 class="display display--section">낱개 포장으로<br />더 신선하게</h2>
+      <ul class="pack__list">
+        <li>6봉 낱개 포장으로 눅눅해질 틈이 없어요</li>
+        <li>한 봉 37.7kcal, 부담 없이 매일</li>
+        <li>국내 HACCP 인증시설 생산</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="waitlist-section">
+  <div class="waitlist" id="waitlist">
+    <div class="waitlist__pitch">
+      <span class="eyebrow">THE WAITLIST</span>
+      <h2 class="display display--section">가장 먼저<br />만나보세요.</h2>
+      <p class="prose">출시 소식과 얼리버드 혜택을 웨이트리스트에 가장 먼저 보내드려요.</p>
+    </div>
+
+    <div class="waitlist__card">
+      <form class="fullform" data-when="idle" name="myeongran-waitlist" method="POST"
+            data-netlify="true" netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="myeongran-waitlist" />
+        <p hidden aria-hidden="true">
+          <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+        </p>
+        <label class="field">
+          이름
+          <input type="text" name="name" placeholder="홍길동" autocomplete="name" data-name-sync />
+        </label>
+        <label class="field">
+          이메일
+          <input type="email" name="email" required placeholder="you@email.com" autocomplete="email" data-email-sync />
+        </label>
+        <button type="submit" class="fullform__btn">웨이트리스트 등록하기</button>
+        <span class="fullform__fine">스팸 없이, 출시 소식만 보내드려요. 언제든 수신거부 가능합니다.</span>
+      </form>
+
+      <div data-when="done" hidden style="display:flex; flex-direction:column; gap:12px; align-items:flex-start;">
+        <span class="donetag">등록 완료!</span>
+        <p class="prose" style="margin:0;">출시 소식을 가장 먼저 보내드릴게요<span data-greet></span>. 확인 메일함을 확인해주세요.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <footer class="footer">
-  <div class="footer__brand">
-    <img src="/assets/anthrolabs-logo.svg" alt="Anthrolabs" width="5001" height="513" />
-    <span>Korean everyday things, brought over one at a time.</span>
-  </div>
-  <div class="footer__cols">
-    <div class="footer__col">
-      <span class="footer__head">SHOP</span>
-      <a href="#waitlist">Shop</a>
-      <a href="mailto:admin@theanthrolabs.com?subject=Wholesale%20inquiry">Wholesale</a>
-      <a href="#waitlist">Where to find us</a>
-    </div>
-    <div class="footer__col">
-      <span class="footer__head">SAY HI</span>
-      <a href="#" rel="noopener">Instagram</a>
-      <a href="#" rel="noopener">TikTok</a>
-      <a href="mailto:admin@theanthrolabs.com">admin@theanthrolabs.com</a>
-    </div>
-    <div class="footer__col">
-      <span class="footer__head">LEGAL</span>
-      <a href="#">Privacy</a>
-      <a href="#">Terms</a>
-      <a href="#">Accessibility</a>
-    </div>
-  </div>
+  <span>&copy; <span id="year"></span> 바른명란김. All rights reserved.</span>
+  <a href="mailto:admin@theanthrolabs.com">admin@theanthrolabs.com</a>
 </footer>
-<div class="copyright">© <span id="year">2026</span> Anthrolabs</div>
 
-<script src="/script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
