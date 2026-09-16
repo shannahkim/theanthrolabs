@@ -38,7 +38,7 @@ body {
 }
 
 a { color: var(--ink); text-decoration: none; }
-img { max-width: 100%; display: block; }
+img { max-width: 100%; height: auto; display: block; }
 input, button, textarea { font: inherit; color: inherit; }
 input::placeholder { color: var(--faint); }
 :where(input, button, a, [tabindex]):focus-visible {
