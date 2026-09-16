@@ -19,6 +19,7 @@
   <link rel="preconnect" href="https://cdn.jsdelivr.net" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
 
+  <link rel="preload" as="image" href="assets/hero-front.webp" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -58,7 +59,8 @@
   </div>
 
   <div class="hero__art">
-    <img src="assets/hero-front.png" alt="바른명란김 패키지" width="815" height="1400" />
+    <img class="hero__accent" src="assets/hero-angle.webp" alt="" width="900" height="900" aria-hidden="true" loading="lazy" />
+    <img src="assets/hero-front.webp" alt="바른명란김 패키지" width="815" height="1400" fetchpriority="high" />
   </div>
 </section>
 
@@ -164,6 +166,7 @@
       <div class="benefit">
         <span class="benefit__tag">장점 1</span>
         <h3>남다르게 바삭하니까</h3>
+        <img class="benefit__img" src="assets/sheet-front.webp" alt="명란을 얹은 바른명란김 낱장" width="524" height="900" loading="lazy" />
         <p>얇게 펴 바른 명란과 현미유가 눅눅함 없이 끝까지 바삭한 식감을 지켜줍니다.</p>
       </div>
       <div class="benefit">
@@ -187,7 +190,7 @@
 
 <section id="pack" style="background: var(--panel);">
   <div class="section-inner pack">
-    <img src="assets/sixpack.jpg" alt="바른명란김 6봉 구성" width="1400" height="1400" loading="lazy" />
+    <img src="assets/sixpack.webp" alt="바른명란김 6봉 구성" width="1400" height="1400" loading="lazy" />
     <div class="pack__copy">
       <span class="eyebrow eyebrow--ghost">구성</span>
       <h2 class="display display--section">낱개 포장으로<br />더 신선하게</h2>
